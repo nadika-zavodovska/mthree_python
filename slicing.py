@@ -29,7 +29,7 @@ string_ex = "abcdefghij"
 # Write a slice that returns "jihgfedcba" (reversed)
 
 # print(string_ex[::-1])
-# print(string_ex[-1:1:-1])
+print(string_ex[-1:1:-1])
 
 
 
