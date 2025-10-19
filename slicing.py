@@ -1,5 +1,6 @@
 string_ex = "abcdefghij"
 
+# Level - Basics
 # Task 1
 # Extract "cde"
 
@@ -29,17 +30,20 @@ string_ex = "abcdefghij"
 # Write a slice that returns "jihgfedcba" (reversed)
 
 # print(string_ex[::-1])
-print(string_ex[-1:1:-1])
+# print(string_ex[-1:1:-1])
 
+# Level 2 — Negative indexes
+# Task 6 - Get last 3 chars using negative slicing
 
+# print(string_ex[-3:])
 
+# Task 7 - Get "fgh" using only negative indexes
 
+# print(string_ex[-5:-2])
 
+# Task 8 - Reverse the string except the first and last char
+# print(string_ex[-2:-10:-1])
 
-
-
-
-
-
-
-
+# Task 9 - Get every second char but reversed
+# print(string_ex[::2][::-1])
+# print(string_ex[::-1][::2])
