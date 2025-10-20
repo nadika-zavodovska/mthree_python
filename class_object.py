@@ -35,7 +35,7 @@ lion = Animal(3, "Lion", "large", "brown", 10, "150 kg")
 # Step #3 Group objects in a list
 list_animals = [cat, dog, lion]
 
-# Step 4 Display values of the objects through list iterating 
+# Step #4 Display values of the objects through list iterating 
 for animal in list_animals:
     print(animal.getAnimalDetails())
     
