@@ -1,5 +1,9 @@
+# Import related to abstraction, abstract method
+from abc import ABC, abstractmethod
+
 # Step #1 Create a class
-class Animal:
+# (ABC) related to abstraction, abstract method
+class Animal(ABC):
     def __init__(self, id, size, color, age, weight):
         # Apply encapsulation by using private to the variables
         self.__id = id        
@@ -7,7 +11,7 @@ class Animal:
         self.__color = color
         self.__age = age
         self.__weight = weight
-        
+
     """@property lets you define a method that can be accessed 
     like an attribute, giving you the simplicity of a variable
     with the power of a function
@@ -18,6 +22,14 @@ class Animal:
 
     def getAnimalDetails(self):
         return f"ID: {self.__id}, Size: {self.__size}, Colour: {self.__color}, Age: {self.__age}, Weight: {self.__weight}"
+    # Declare "what must exist" (@abstractmethod) without saying "how". Must implement in child
+    @abstractmethod
+    def getAnimalLifespan(self):
+        pass
+
+    @abstractmethod
+    def getAnimalMaxspeed(self):
+        pass
 
 """
 Inheritance. Cat, Dog, and Rabbit classes inherit from Animal class (state __init__(id, size, color etc), species property, getAnimalDetails())
