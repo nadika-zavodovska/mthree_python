@@ -35,12 +35,44 @@ lion = Animal(3, "Lion", "large", "brown", 10, "150 kg")
 # Step #3 Group objects in a list
 list_animals = [cat, dog, lion]
 
-# Step #4 Display values of the objects through list iterating 
-for animal in list_animals:
+# Step #4 Display values of the objects through list iterating
+# for animal in list_animals:
+#     print(animal.getAnimalDetails())
+
+# for animal in list_animals:
+#     print(f"Lifespan: {animal.species} - {animal.getAnimalLifespan()}")
+
+# for animal in list_animals:
+#     print(f"Max speed: {animal.species} - {animal.getAnimalMaxspeed()}")
+
+
+# Add Owner class
+class Owner:
+    def __init__(self, name, contact):
+        self.name = name
+        self.contact = contact
+        self.animals = []
+
+    def add(self, animal):
+        self.animals.append(animal)
+
+    def remove(self, name):
+        # Store animals we want to keep
+        new_list = []
+        for animal in self.animals:
+            if animal.name != name:
+                new_list.append(animal)
+        self.animals = new_list
+
+    def list(self):
+        return self.animals
+
+# Add owner object
+owner_1 = Owner("Tom", "07348370947")
+
+owner_1.add(cat)
+owner_1.add(dog)
+
+print(f"{owner_1.name} has animals: ")
+for animal in owner_1.animals:
     print(animal.getAnimalDetails())
-    
-for animal in list_animals:
-    print(f"Lifespan: {animal.species} - {animal.getAnimalLifespan()}")
-    
-for animal in list_animals:
-    print(f"Max speed: {animal.species} - {animal.getAnimalMaxspeed()}")
