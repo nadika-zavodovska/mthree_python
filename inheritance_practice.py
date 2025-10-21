@@ -1,11 +1,12 @@
 # Step #1 Create a class
 class Animal:
     def __init__(self, id, size, color, age, weight):
-        self.id = id        
-        self.size = size
-        self.color = color
-        self.age = age
-        self.weight = weight
+        # Apply encapsulation by using private to the variables
+        self.__id = id        
+        self.__size = size
+        self.__color = color
+        self.__age = age
+        self.__weight = weight
         
     """@property lets you define a method that can be accessed 
     like an attribute, giving you the simplicity of a variable
@@ -16,7 +17,7 @@ class Animal:
         return self.__class__.__name__
 
     def getAnimalDetails(self):
-        return f"ID: {self.id}, Size: {self.size}, Colour: {self.color}, Age: {self.age}, Weight: {self.weight}"
+        return f"ID: {self.__id}, Size: {self.__size}, Colour: {self.__color}, Age: {self.__age}, Weight: {self.__weight}"
 
 """
 Inheritance. Cat, Dog, and Rabbit classes inherit from Animal class (state __init__(id, size, color etc), species property, getAnimalDetails())
