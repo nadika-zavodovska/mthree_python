@@ -15,13 +15,13 @@ Refactor the program, using a float instead of an integer. What happens if you e
 Solution
 This line returns a string
 """
-user_number = input("Enter a number: ")
-print(type(user_number))
-# Convert string to float
-number = float(user_number)
-# convert to integer (drops decimal part)
-converted_integer = int(number)
-print(f"The value is {converted_integer} with type {type(converted_integer)}.")
+# user_number = input("Enter a number: ")
+# print(type(user_number))
+# # Convert string to float
+# number = float(user_number)
+# # convert to integer (drops decimal part)
+# converted_integer = int(number)
+# print(f"The value is {converted_integer} with type {type(converted_integer)}.")
 
 # ***
 
@@ -39,8 +39,22 @@ Do not change any of the existing values or operators or the order in which they
 
 # Solution:
 # I added parentheses to change the order of evaluation
-result = (5 + 3) ** 2 * 9 
+# result = (5 + 3) ** 2 * 9
 
-print(result) 
+# print(result)
 
 # ***
+
+""" Activity 3
+Create a computer program that prompts the user for a float number and returns the integer portion of the floating number.
+"""
+
+# Solution
+
+def convert_float_int():
+    user_float_num = input("Enter a float number ")
+    converted_float = float(user_float_num)
+    return int(converted_float)
+
+user_int_num = convert_float_int()
+print(f"Your integer number is {user_int_num}")
