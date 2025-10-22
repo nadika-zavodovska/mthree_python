@@ -11,10 +11,9 @@ Run the program and enter a float value at the prompt. What is its value in the 
 Refactor the program, using a float instead of an integer. What happens if you enter an integer rather than a float at the prompt?
 """
 
-""" 
-Solution
-This line returns a string
-"""
+# Solution
+
+# This line returns a string
 user_number = input("Enter a number: ")
 print(type(user_number))
 # Convert string to float
@@ -35,7 +34,6 @@ Do not change any of the existing values or operators or the order in which they
 # result = 5 + 3**2 * 9
 
 # print(result)  # the output should be 576
-
 
 # Solution:
 # I added parentheses to change the order of evaluation
@@ -58,3 +56,62 @@ def convert_float_int():
 
 user_int_num = convert_float_int()
 print(f"Your integer number is {user_int_num}")
+
+# ***
+
+"""
+Activity 4
+Write a computer program that calculates and displays the current value of a deposit for a given initial deposit, interest rate, how many times interest is calculated per year, and the number of years since the initial deposit.
+
+The program should prompt the user for each of the values and use the following formula to calculate the current value of the deposit:
+
+V = P(1 + r/n)^nt
+where
+
+V -- value
+P -- initial deposit
+r -- interest rate as a fraction (eg 0.05)
+n -- the number of times per year interest is calculated
+t -- the number of years since the initial deposit
+The program should display each of the values entered to the user in a meaningful way (so that the user can easily see what each value represents), along with the results of the calculation.
+"""
+
+def get_user_value_deposit():
+    user_initial_deposit = float(input("What is your initial deposit? "))
+    user_fraction_interest_rate = float(input("What is your interest rate as a fraction? "))
+    user_num_times_calcul_deposit_year = int(input("How many numbers of times per year interest is calculated?"))
+    user_years_deposit = float(input("How many numbers of year since the initial deposit?"))
+
+    value_deposit = user_initial_deposit * (
+        1 + user_fraction_interest_rate / user_num_times_calcul_deposit_year
+    ) ** (user_num_times_calcul_deposit_year * user_years_deposit)
+    round_value_deposit = round(value_deposit, 2)
+
+    # Return tuple with 5 values
+    return (
+        round_value_deposit,
+        user_initial_deposit,
+        user_fraction_interest_rate,
+        user_num_times_calcul_deposit_year,
+        user_years_deposit,
+    )
+
+# Unpack tuples
+(
+    user_value_deposit,
+    user_initial_deposit,
+    user_fraction_interest_rate,
+    user_num_times_calcul_deposit_year,
+    user_years_deposit,
+) = get_user_value_deposit()
+
+print(
+    f"""========
+Your bank details:
+Your current value of your deposit is £{user_value_deposit}.
+Your initial deposit is £{user_initial_deposit}.
+Your interest rate is {user_fraction_interest_rate * 100:.2f}%.
+Your interest is calculated {user_num_times_calcul_deposit_year} times per year.
+{user_years_deposit} years since your initial deposit.
+"""
+)
