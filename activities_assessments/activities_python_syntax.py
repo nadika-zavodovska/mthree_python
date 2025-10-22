@@ -26,8 +26,8 @@ print("Python is fun!"); print("Python is also easy.")
 # Task #3
 # Display the text in quotation marks to an output block
 # without moving any of the existing code to a different line
-# print
-# ("Python is fun!")
+print
+("Python is fun!")
 
 """ Fixed code
 I added \ . It treats next line as it is a part of the same line
@@ -58,3 +58,14 @@ print(last_name)
 
 
 # Activity 2
+
+# Add a new line of code that displays the text in quotation marks
+# to an output block without repeating the text in quotation marks.
+output = "I love Python!"
+
+# your code below this line
+
+"""Fixed code:
+I used output variable to print the string 
+"""
+print(output)
