@@ -24,7 +24,7 @@ number = float(user_number)
 converted_integer = int(number)
 print(f"The value is {converted_integer} with type {type(converted_integer)}.")
 
-# ***
+# ----------------------------------------
 
 """
 Activity 2
@@ -38,12 +38,13 @@ Do not change any of the existing values or operators or the order in which they
 # print(result)  # the output should be 576
 
 # Solution:
+
 # I added parentheses to change the order of evaluation
 result = (5 + 3) ** 2 * 9
 
 print(result)
 
-# ***
+# ----------------------------------------
 
 """ Activity 3
 Create a computer program that prompts the user for a float number and returns the integer portion of the floating number.
@@ -59,7 +60,7 @@ def convert_float_int():
 user_int_num = convert_float_int()
 print(f"Your integer number is {user_int_num}")
 
-# ***
+# ----------------------------------------
 
 """
 Activity 4
@@ -77,6 +78,8 @@ n -- the number of times per year interest is calculated
 t -- the number of years since the initial deposit
 The program should display each of the values entered to the user in a meaningful way (so that the user can easily see what each value represents), along with the results of the calculation.
 """
+
+# Solution
 
 def get_user_value_deposit():
     user_initial_deposit = float(input("What is your initial deposit? "))
@@ -118,7 +121,7 @@ Your interest is calculated {user_num_times_calcul_deposit_year} times per year.
 """
 )
 
-# ***
+# ----------------------------------------
 
 # Activity 5
 """
@@ -141,7 +144,10 @@ interest_value = get_interest_for_loan()
 
 print(f"The simple interest for the life of the loan is {interest_value:.2f}")
 
+# ----------------------------------------
+
 # Activity 6
+
 """
 Create a computer program that displays three statements that evaluate to True and three statements that evaluate to False.
 Example:
@@ -165,9 +171,10 @@ print(a == b)
 print(a > b)
 print(b < a)
 
-# ***
+# ----------------------------------------
 
 # Activity 7
+
 """
 Create a computer program that prompts the user for a number and calculates the following:
 
@@ -198,7 +205,7 @@ The square root of your number is {user_number_sqrt:.3f}.
 """
 )
 
-# ***
+# ----------------------------------------
 
 # Activity 8
 
@@ -237,6 +244,35 @@ print(
 The integers you entered: {list_integers}
 The product of the integers: {product_integers}.
 The average of integers: {average_integers}.
-The sum of integers: {sum_integers}.      
+The sum of integers: {sum_integers}.
 """
+)
+
+# ----------------------------------------
+
+# Activity 9
+
+"""Write a program that performs the following steps:
+Start with a street address that includes a building/house number, the name of the street, and the type of street (e.g., Street, Avenue, Boulevard, etc.).
+You can use any address you wish and abbreviations are acceptable.
+An example is 25 Main Street.
+Display the full address to the user.
+Display the house number only in a phrase like, "The building or house number is 25."
+Display the street name in a phrase like, "The street name is Main Street.
+"""
+
+# Solution:
+
+address = "25 Main Street"
+# Split only one time
+address_parts = address.split(" ", 1)
+print(address_parts)
+building = address_parts[0]
+street_name = address_parts[1]
+
+print(
+    f"""The full address is {address}
+The building or house number is {building}
+The street name is {street_name}
+      """
 )
