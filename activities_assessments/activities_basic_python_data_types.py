@@ -135,6 +135,30 @@ def get_interest_for_loan():
 
     return interest
 
-interest_value = get_interest_for_loan() 
+interest_value = get_interest_for_loan()
 
 print(f"The simple interest for the life of the loan is {interest_value:.2f}")
+
+# Activity 6
+"""
+Create a computer program that displays three statements that evaluate to True and three statements that evaluate to False.
+Example:
+a = 0
+b = 1 
+
+Output: a < b = True
+"""
+
+# Solution:
+a = 0
+b = 1
+
+print("---True statements---")
+print(a < b)
+print(b > a)
+print(a != b)
+
+print("---False statements---")
+print(a == b)
+print(a > b)
+print(b < a)
