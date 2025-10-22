@@ -23,7 +23,6 @@ class Dog(Pet):
     def speak(self):
         print("Bark, Woof")
 
-
 class Cat(Pet):
     def speak(self):
         print("Meow!")

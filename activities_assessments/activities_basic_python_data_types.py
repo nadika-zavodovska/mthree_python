@@ -115,3 +115,26 @@ Your interest is calculated {user_num_times_calcul_deposit_year} times per year.
 {user_years_deposit} years since your initial deposit.
 """
 )
+
+# ***
+
+# Activity 5
+"""
+Write a computer program that prompts the user for a principal amount, the rate of interest, and the number of days for a loan and then calculates and returns the simple interest for the life of the loan. Use the formula:
+interest = principal * rate * days / 365
+"""
+
+# Solution:
+
+def get_interest_for_loan():
+    principal_amount = float(input("Enter principal amount: "))
+    interest_rate = float(input("Enter your interest rate "))
+    days_loan = int(input("Enter number of days for the loan: "))
+
+    interest = principal_amount * interest_rate * days_loan / 365
+
+    return interest
+
+interest_value = get_interest_for_loan() 
+
+print(f"The simple interest for the life of the loan is {interest_value:.2f}")
