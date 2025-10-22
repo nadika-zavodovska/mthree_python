@@ -56,6 +56,7 @@ last_name = "Roberts" # last name
 print(first_name)
 print(last_name)
 
+# ***
 
 # Activity 2
 
@@ -69,3 +70,18 @@ output = "I love Python!"
 I used output variable to print the string 
 """
 print(output)
+
+# ***
+
+# Activity 3
+
+# Create a script that prompts the user for the name of the state where they were born and the name of the state where they live now. Save each value in its own variable and display the input values to the user.
+
+"""Fixed code
+I used input function to promt user for the name of the state 
+"""
+user_born_state = input("Where were you born? ")
+user_live_state = input("Where do you live now? ")
+
+print(f"You were born in {user_born_state}.")
+print(f"You are living in {user_live_state} now.")
