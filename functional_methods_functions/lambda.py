@@ -1,3 +1,5 @@
+from functools import reduce
+
 # Filter method
 
 # Add two numbers
@@ -319,3 +321,69 @@ people = [
 
 # people_ages_more_18 = list(map(lambda person: f"Age: {person["age"]}", (filter(lambda person: person["age"] > 18, people))))
 # print(people_ages_more_18)
+
+# Reduce method
+
+# Sum all numbers
+# Input: [1, 2, 3, 4, 5]
+
+# Expected: 15
+
+nums = [1, 2, 3, 4, 5]
+sum_nums = reduce(lambda a, b: a + b, nums)
+print(sum_nums)
+
+# Multiply all numbers
+# Input: [2, 3, 4]
+# Expected: 24   # 2 * 3 * 4
+
+nums = [2, 3, 4]
+mult_nums = reduce(lambda a, b: a * b, nums)
+print(mult_nums)
+
+# Find the maximum number
+# Input: [10, 50, 3, 99, 23]
+# Expected: 99
+
+nums = [10, 50, 3, 99, 23]
+max_num = reduce(lambda a, b: max(a, b), nums)
+print(max_num)
+
+# Find the minimum number
+# Input:[4, 9, 1, 7]
+# Expected: 1
+
+nums = [4, 9, 1, 7]
+min_nums = reduce(lambda a, b: min(a, b), nums)
+print(min_nums)
+
+# Concatenate list of strings
+# Input: ["Python", " ", "is", " ", "fun"]
+# Expected: "Python is fun"
+
+strs = ["Python", " ", "is", " ", "fun"]
+concat_strs = reduce(lambda a, b: a + b, strs)
+print(concat_strs)
+
+# Sum of only even numbers using reduce + filter
+# Input: [1,2,3,4,5,6]
+
+nums = [1, 2, 3, 4, 5, 6]
+sum_even_nums = reduce(lambda a, b: a + b, (filter(lambda num: num % 2 == 0, nums)))
+print(sum_even_nums)
+
+# Sum prices in a list of dicts
+# Input: [
+#   {"item": "A", "price": 10},
+#   {"item": "B", "price": 20},
+#   {"item": "C", "price": 5}
+# ]
+# Expected: 35
+
+prices = [
+  {"item": "A", "price": 10},
+  {"item": "B", "price": 20},
+  {"item": "C", "price": 5}
+]
+sum_prices = reduce(lambda a, b: a + b["price"], prices, 0)
+print(sum_prices)
